@@ -33,13 +33,14 @@ cmdFiles.forEach(f => {
 });
 
 const evtFiles = readdirSync('./events/');
-console.log('log', `Carregando total de ${evtFiles.length} eventos.`);
+console.log('log', `Carregando um total de ${evtFiles.length} eventos`);
+
 evtFiles.forEach(f => {
     const eventName = f.split('.')[0];
-    const  event = require(`./events/${f}`);
+    const event = require(`./events/${f}`);
 
     client.on(eventName, event.bind(null, client));
 });
 
 client.login(process.env.AUTH_TOKEN);
-// O trecho do código accima vai iniciar o bot.
+// O trecho do código acima vai iniciar o bot.
