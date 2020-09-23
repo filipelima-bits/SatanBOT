@@ -38,7 +38,7 @@ console.log('log', `Carregando um total de ${evtFiles.length} eventos`);
 evtFiles.forEach(f => {
     const eventName = f.split('.')[0];
     const event = require(`./events/${f}`);
-
+    
     client.on(eventName, event.bind(null, client));
 });
 
