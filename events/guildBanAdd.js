@@ -15,8 +15,8 @@ module.exports = (client, guild, user) => {
 				.setColor('#fa1b1b')
 				.setTimestamp()
 				.setTitle('Membro banido !!')
-				.setDescription(`O membro ${banMember.tag} foi banido pelo staffer ${logs.entries.first().executor.tag}`)
-                .setFooter(`ID: (${banMember.id})`, banMember.displayAvatarURL());
+				.setDescription(`O membro **${banMember.tag}** foi banido pelo staffer **${logs.entries.first().executor.tag}**`)
+                .setFooter(`${banMember.tag}`, banMember.displayAvatarURL());
             
             modlog.send({embed: embedBan}).catch();
 		     

@@ -6,6 +6,7 @@ const Discord = require('discord.js');
 const { readdirSync } = require('fs');
 const Enmap = require('enmap');
 const client = new Discord.Client();
+const db = require('quick.db');
 
 client.commands = new Enmap();
 client.startTime = Date.now();
